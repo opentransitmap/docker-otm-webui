@@ -22,7 +22,7 @@ ENV \
   RELAY_FETCH_TIMEOUT=''
 
 # Checkout fork of digitransit-ui
-RUN git clone https://github.com/mapanica/digitransit-ui.git ${WORK}
+RUN git clone -b testui https://github.com/mapanica/digitransit-ui.git ${WORK}
 
 WORKDIR ${WORK}
 ADD . ${WORK}
