@@ -29,9 +29,15 @@ ADD . ${WORK}
 
 RUN \
   yarn install --silent && \
-  yarn add --force node-sass && \
-  yarn run build && \
-  rm -rf static docs test /tmp/* && \
-  yarn cache clean
+  yarn add --force node-sass
 
-CMD yarn run start
+CMD yarn run dev
+
+#RUN \
+#  yarn install --silent && \
+#  yarn add --force node-sass && \
+#  yarn run build && \
+#  rm -rf static docs test /tmp/* && \
+#  yarn cache clean
+#
+#CMD yarn run start
