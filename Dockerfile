@@ -31,7 +31,9 @@ RUN \
   yarn install --silent && \
   yarn add --force node-sass
 
-CMD yarn run dev
+ADD run.sh /run.sh
+RUN chmod +x /run.sh
+ENTRYPOINT ["/run.sh"]
 
 #RUN \
 #  yarn install --silent && \
